@@ -33,7 +33,6 @@ class BinaryTreeTable extends ActiveRecord
             [['parent_id', 'position', 'path', 'level'], 'required'],
             [['parent_id', 'position', 'level'], 'integer'],
             [['path'], 'string', 'max' => 12288],
-            [['path'], 'unique'],
             [['parent_id', 'position'], 'unique', 'targetAttribute' => ['parent_id', 'position']],
         ];
     }

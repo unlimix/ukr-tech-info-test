@@ -55,6 +55,7 @@ class BinaryNode
                 $path = $this->node->path . $this->node->id;
             }
             $this->node->setAttribute('path', (string)$path);
+            $this->node->save();
         } else {
             var_dump($this->node->getErrors());
         }
